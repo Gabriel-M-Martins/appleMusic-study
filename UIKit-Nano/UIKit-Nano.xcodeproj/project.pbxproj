@@ -13,6 +13,9 @@
 		A7E83B192A40D08500F4FA2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E83B172A40D08500F4FA2B /* Main.storyboard */; };
 		A7E83B1B2A40D08600F4FA2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E83B1A2A40D08600F4FA2B /* Assets.xcassets */; };
 		A7E83B1E2A40D08600F4FA2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E83B1C2A40D08600F4FA2B /* LaunchScreen.storyboard */; };
+		A7E83B262A40D13F00F4FA2B /* OpenedPlaylist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E83B252A40D13F00F4FA2B /* OpenedPlaylist.storyboard */; };
+		A7E83B2F2A40E34E00F4FA2B /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E83B2D2A40E34E00F4FA2B /* MusicTableViewCell.swift */; };
+		A7E83B302A40E34E00F4FA2B /* MusicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E83B2E2A40E34E00F4FA2B /* MusicTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		A7E83B1A2A40D08600F4FA2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7E83B1D2A40D08600F4FA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7E83B1F2A40D08600F4FA2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7E83B252A40D13F00F4FA2B /* OpenedPlaylist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OpenedPlaylist.storyboard; sourceTree = "<group>"; };
+		A7E83B2D2A40E34E00F4FA2B /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
+		A7E83B2E2A40E34E00F4FA2B /* MusicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		A7E83B102A40D08500F4FA2B /* UIKit-Nano */ = {
 			isa = PBXGroup;
 			children = (
+				A7E83B272A40DA9400F4FA2B /* Components */,
 				A7E83B112A40D08500F4FA2B /* AppDelegate.swift */,
 				A7E83B132A40D08500F4FA2B /* SceneDelegate.swift */,
 				A7E83B152A40D08500F4FA2B /* ViewController.swift */,
@@ -63,8 +70,26 @@
 				A7E83B1A2A40D08600F4FA2B /* Assets.xcassets */,
 				A7E83B1C2A40D08600F4FA2B /* LaunchScreen.storyboard */,
 				A7E83B1F2A40D08600F4FA2B /* Info.plist */,
+				A7E83B252A40D13F00F4FA2B /* OpenedPlaylist.storyboard */,
 			);
 			path = "UIKit-Nano";
+			sourceTree = "<group>";
+		};
+		A7E83B272A40DA9400F4FA2B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A7E83B2A2A40E13600F4FA2B /* MusicRow */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A7E83B2A2A40E13600F4FA2B /* MusicRow */ = {
+			isa = PBXGroup;
+			children = (
+				A7E83B2D2A40E34E00F4FA2B /* MusicTableViewCell.swift */,
+				A7E83B2E2A40E34E00F4FA2B /* MusicTableViewCell.xib */,
+			);
+			path = MusicRow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7E83B1E2A40D08600F4FA2B /* LaunchScreen.storyboard in Resources */,
+				A7E83B262A40D13F00F4FA2B /* OpenedPlaylist.storyboard in Resources */,
 				A7E83B1B2A40D08600F4FA2B /* Assets.xcassets in Resources */,
 				A7E83B192A40D08500F4FA2B /* Main.storyboard in Resources */,
+				A7E83B302A40E34E00F4FA2B /* MusicTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +168,7 @@
 				A7E83B162A40D08500F4FA2B /* ViewController.swift in Sources */,
 				A7E83B122A40D08500F4FA2B /* AppDelegate.swift in Sources */,
 				A7E83B142A40D08500F4FA2B /* SceneDelegate.swift in Sources */,
+				A7E83B2F2A40E34E00F4FA2B /* MusicTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +323,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +352,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
