@@ -124,6 +124,8 @@ struct Queue {
 
 // MARK: - MusicService
 final class MusicService {
+    public static let shared: MusicService = try! MusicService()
+    
     //MARK: Variables Setup
     private let allMusics: [Music]
     private var collections: Set<MusicCollection>
