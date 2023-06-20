@@ -267,7 +267,7 @@ final class MusicService {
     ///
     /// - Parameters:
     ///   - music: The music to be removed from queue
-    ///
+    ///   
     func removeFromQueue(music: Music) {
         queue.nextInCollection.removeAll { $0 == music }
         queue.nextSuggested.removeAll { $0 == music }

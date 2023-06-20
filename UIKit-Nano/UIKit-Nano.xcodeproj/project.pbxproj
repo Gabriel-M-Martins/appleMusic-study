@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B15351B2A4217650064ABC3 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B15351A2A4217650064ABC3 /* MusicService.swift */; };
+		0B1535202A4217B00064ABC3 /* data-with-images.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B15351D2A4217B00064ABC3 /* data-with-images.json */; };
+		0B1535212A4217B00064ABC3 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B15351E2A4217B00064ABC3 /* data.json */; };
+		0B1535222A4217B00064ABC3 /* data-images.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B15351F2A4217B00064ABC3 /* data-images.json */; };
 		A75914242A4214560084CC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75914232A4214560084CC9A /* Assets.xcassets */; };
 		A7E83B122A40D08500F4FA2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E83B112A40D08500F4FA2B /* AppDelegate.swift */; };
 		A7E83B142A40D08500F4FA2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E83B132A40D08500F4FA2B /* SceneDelegate.swift */; };
 		A7E83B162A40D08500F4FA2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E83B152A40D08500F4FA2B /* ViewController.swift */; };
 		A7E83B192A40D08500F4FA2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E83B172A40D08500F4FA2B /* Main.storyboard */; };
 		A7E83B1E2A40D08600F4FA2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E83B1C2A40D08600F4FA2B /* LaunchScreen.storyboard */; };
-		A7E83B342A40EECE00F4FA2B /* Model in Resources */ = {isa = PBXBuildFile; fileRef = A7E83B322A40EECE00F4FA2B /* Model */; };
-		A7E83B362A40EEE200F4FA2B /* Service in Resources */ = {isa = PBXBuildFile; fileRef = A7E83B352A40EEE200F4FA2B /* Service */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B15351A2A4217650064ABC3 /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
+		0B15351D2A4217B00064ABC3 /* data-with-images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-with-images.json"; sourceTree = "<group>"; };
+		0B15351E2A4217B00064ABC3 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		0B15351F2A4217B00064ABC3 /* data-images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-images.json"; sourceTree = "<group>"; };
 		A75914232A4214560084CC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7E83B0E2A40D08500F4FA2B /* UIKit-Nano.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit-Nano.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E83B112A40D08500F4FA2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,8 +32,6 @@
 		A7E83B182A40D08500F4FA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7E83B1D2A40D08600F4FA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7E83B1F2A40D08600F4FA2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7E83B322A40EECE00F4FA2B /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
-		A7E83B352A40EEE200F4FA2B /* Service */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Service; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B1535192A4217580064ABC3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0B15351A2A4217650064ABC3 /* MusicService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0B15351C2A4217A40064ABC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B15351F2A4217B00064ABC3 /* data-images.json */,
+				0B15351D2A4217B00064ABC3 /* data-with-images.json */,
+				0B15351E2A4217B00064ABC3 /* data.json */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A7E83B052A40D08500F4FA2B = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +82,8 @@
 		A7E83B102A40D08500F4FA2B /* UIKit-Nano */ = {
 			isa = PBXGroup;
 			children = (
-				A7E83B322A40EECE00F4FA2B /* Model */,
-				A7E83B352A40EEE200F4FA2B /* Service */,
+				0B15351C2A4217A40064ABC3 /* Model */,
+				0B1535192A4217580064ABC3 /* Service */,
 				A7E83B112A40D08500F4FA2B /* AppDelegate.swift */,
 				A7E83B132A40D08500F4FA2B /* SceneDelegate.swift */,
 				A7E83B152A40D08500F4FA2B /* ViewController.swift */,
@@ -131,11 +153,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7E83B362A40EEE200F4FA2B /* Service in Resources */,
-				A7E83B342A40EECE00F4FA2B /* Model in Resources */,
 				A7E83B1E2A40D08600F4FA2B /* LaunchScreen.storyboard in Resources */,
+				0B1535222A4217B00064ABC3 /* data-images.json in Resources */,
 				A7E83B192A40D08500F4FA2B /* Main.storyboard in Resources */,
 				A75914242A4214560084CC9A /* Assets.xcassets in Resources */,
+				0B1535212A4217B00064ABC3 /* data.json in Resources */,
+				0B1535202A4217B00064ABC3 /* data-with-images.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +172,7 @@
 				A7E83B162A40D08500F4FA2B /* ViewController.swift in Sources */,
 				A7E83B122A40D08500F4FA2B /* AppDelegate.swift in Sources */,
 				A7E83B142A40D08500F4FA2B /* SceneDelegate.swift in Sources */,
+				0B15351B2A4217650064ABC3 /* MusicService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +319,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 73DNAYF2TM;
+				DEVELOPMENT_TEAM = 3GNMJZ6Q8Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "UIKit-Nano/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -323,7 +347,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 73DNAYF2TM;
+				DEVELOPMENT_TEAM = 3GNMJZ6Q8Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "UIKit-Nano/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
