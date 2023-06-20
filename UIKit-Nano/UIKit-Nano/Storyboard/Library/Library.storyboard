@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FvO-Vh-MGi">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Library-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="LibraryViewController" customModule="UIKit_Nano" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0fo-c1-S47">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MusicCollectionTypeCell" textLabel="2gx-Vj-VHO" imageView="9eJ-7P-EP5" rowHeight="48" style="IBUITableViewCellStyleDefault" id="vO9-FA-fjQ" customClass="MusicCollectionTypeTableViewCell" customModule="UIKit_Nano" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vO9-FA-fjQ" id="A9U-Dl-s8e">
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2gx-Vj-VHO">
+                                                    <rect key="frame" x="60.5" y="0.0" width="294.16666666666669" height="48"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9eJ-7P-EP5">
+                                                    <rect key="frame" x="18.5" y="11.666666666666666" width="27" height="25.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <imageReference key="image" image="music.note.list" catalog="system" symbolScale="large"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="2gx-Vj-VHO" id="6Mx-Me-HHu"/>
+                                            <outlet property="iconImage" destination="9eJ-7P-EP5" id="X8G-C4-qtc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0fo-c1-S47" secondAttribute="bottom" id="6OF-vS-3Jc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0fo-c1-S47" secondAttribute="trailing" id="Cft-yR-SWm"/>
+                            <constraint firstItem="0fo-c1-S47" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="deB-SJ-nXH"/>
+                            <constraint firstItem="0fo-c1-S47" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="w8L-0l-Up6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Library" largeTitleDisplayMode="always" id="lEd-Nx-fuW"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="musicCollectionTypeTableView" destination="0fo-c1-S47" id="Lo1-Rv-XhV"/>
+                        <segue destination="Kwt-Um-0TZ" kind="show" identifier="goToPlaylists" id="tnk-ik-sZC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1959.5419847328244" y="4.9295774647887329"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="Ac7-i4-KvG">
+            <objects>
+                <viewControllerPlaceholder id="Kwt-Um-0TZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7Ot-3Z-hR6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMg-4b-UxL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2708" y="-61"/>
+        </scene>
+        <!--Library-->
+        <scene sceneID="EHA-6Z-fQF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FvO-Vh-MGi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Library" image="play.square.fill" catalog="system" selectedImage="play.square.stack.fill" id="PRP-Ys-x40"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Q6U-qC-7bP">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="mSX-j4-EmD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wb-s2-CPw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032.824427480916" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="music.note.list" catalog="system" width="128" height="115"/>
+        <image name="play.square.fill" catalog="system" width="128" height="114"/>
+        <image name="play.square.stack.fill" catalog="system" width="112" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

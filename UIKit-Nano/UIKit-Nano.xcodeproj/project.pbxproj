@@ -11,8 +11,10 @@
 		0B1535202A4217B00064ABC3 /* data-with-images.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B15351D2A4217B00064ABC3 /* data-with-images.json */; };
 		0B1535212A4217B00064ABC3 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B15351E2A4217B00064ABC3 /* data.json */; };
 		0B1535222A4217B00064ABC3 /* data-images.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B15351F2A4217B00064ABC3 /* data-images.json */; };
+		0B1535272A421BA70064ABC3 /* MusicCollectionTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1535262A421BA70064ABC3 /* MusicCollectionTypeTableViewCell.swift */; };
+		0B15352A2A421BF00064ABC3 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1535292A421BF00064ABC3 /* LibraryViewController.swift */; };
+		0BBBF5F72A4230DB0022095F /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BBBF5F62A4230DB0022095F /* Library.storyboard */; };
 		A75914242A4214560084CC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75914232A4214560084CC9A /* Assets.xcassets */; };
-		A75914262A4218530084CC9A /* MusicServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75914252A4218530084CC9A /* MusicServiceTest.swift */; };
 		A7E83B122A40D08500F4FA2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E83B112A40D08500F4FA2B /* AppDelegate.swift */; };
 		A7E83B142A40D08500F4FA2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E83B132A40D08500F4FA2B /* SceneDelegate.swift */; };
 		A7E83B162A40D08500F4FA2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E83B152A40D08500F4FA2B /* ViewController.swift */; };
@@ -25,8 +27,10 @@
 		0B15351D2A4217B00064ABC3 /* data-with-images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-with-images.json"; sourceTree = "<group>"; };
 		0B15351E2A4217B00064ABC3 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		0B15351F2A4217B00064ABC3 /* data-images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-images.json"; sourceTree = "<group>"; };
+		0B1535262A421BA70064ABC3 /* MusicCollectionTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionTypeTableViewCell.swift; sourceTree = "<group>"; };
+		0B1535292A421BF00064ABC3 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		0BBBF5F62A4230DB0022095F /* Library.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Library.storyboard; sourceTree = "<group>"; };
 		A75914232A4214560084CC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A75914252A4218530084CC9A /* MusicServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicServiceTest.swift; sourceTree = "<group>"; };
 		A7E83B0E2A40D08500F4FA2B /* UIKit-Nano.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit-Nano.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E83B112A40D08500F4FA2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7E83B132A40D08500F4FA2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				0B15351A2A4217650064ABC3 /* MusicService.swift */,
-				A75914252A4218530084CC9A /* MusicServiceTest.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -64,6 +67,31 @@
 				0B15351E2A4217B00064ABC3 /* data.json */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0B1535232A4219FB0064ABC3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0B15352B2A4230900064ABC3 /* Library */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		0B1535282A421BD00064ABC3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0B1535292A421BF00064ABC3 /* LibraryViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0B15352B2A4230900064ABC3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				0B1535262A421BA70064ABC3 /* MusicCollectionTypeTableViewCell.swift */,
+				0BBBF5F62A4230DB0022095F /* Library.storyboard */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 		A7E83B052A40D08500F4FA2B = {
@@ -85,6 +113,8 @@
 		A7E83B102A40D08500F4FA2B /* UIKit-Nano */ = {
 			isa = PBXGroup;
 			children = (
+				0B1535282A421BD00064ABC3 /* ViewController */,
+				0B1535232A4219FB0064ABC3 /* Storyboard */,
 				0B15351C2A4217A40064ABC3 /* Model */,
 				0B1535192A4217580064ABC3 /* Service */,
 				A7E83B112A40D08500F4FA2B /* AppDelegate.swift */,
@@ -161,6 +191,7 @@
 				A7E83B192A40D08500F4FA2B /* Main.storyboard in Resources */,
 				A75914242A4214560084CC9A /* Assets.xcassets in Resources */,
 				0B1535212A4217B00064ABC3 /* data.json in Resources */,
+				0BBBF5F72A4230DB0022095F /* Library.storyboard in Resources */,
 				0B1535202A4217B00064ABC3 /* data-with-images.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,7 +206,8 @@
 				A7E83B162A40D08500F4FA2B /* ViewController.swift in Sources */,
 				A7E83B122A40D08500F4FA2B /* AppDelegate.swift in Sources */,
 				A7E83B142A40D08500F4FA2B /* SceneDelegate.swift in Sources */,
-				A75914262A4218530084CC9A /* MusicServiceTest.swift in Sources */,
+				0B1535272A421BA70064ABC3 /* MusicCollectionTypeTableViewCell.swift in Sources */,
+				0B15352A2A421BF00064ABC3 /* LibraryViewController.swift in Sources */,
 				0B15351B2A4217650064ABC3 /* MusicService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +363,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -359,6 +392,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

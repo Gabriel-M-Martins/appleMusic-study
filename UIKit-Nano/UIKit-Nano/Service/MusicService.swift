@@ -60,7 +60,7 @@ enum MusicCollectionType: String, Decodable, CaseIterable {
             case .playlist:
                 return "music.note.list"
             case .album:
-                return ""
+                return "square.stack"
             case .songs:
                 return "music.note"
             case .artists:
@@ -79,6 +79,19 @@ enum MusicCollectionType: String, Decodable, CaseIterable {
                 return "Songs"
             case .artists:
                 return "Artists"
+        }
+    }
+    
+    var segueIdentifier: String {
+        switch self {
+            case .playlist:
+                return "goToPlaylists"
+            case .album:
+                return "goToAlbum"
+            case .songs:
+                return "goToSongs"
+            case .artists:
+                return "goToArtists"
         }
     }
 }
