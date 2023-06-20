@@ -26,8 +26,8 @@
 		A7E83B182A40D08500F4FA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7E83B1D2A40D08600F4FA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7E83B1F2A40D08600F4FA2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7E83B322A40EECE00F4FA2B /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Model; path = "/Users/gabrielmedeirosmartins/Documents/prog/swift/uikit-nano/UIKit-Nano/UIKit-Nano/Model"; sourceTree = "<absolute>"; };
-		A7E83B352A40EEE200F4FA2B /* Service */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Service; path = "/Users/gabrielmedeirosmartins/Documents/prog/swift/uikit-nano/UIKit-Nano/UIKit-Nano/Service"; sourceTree = "<absolute>"; };
+		A7E83B322A40EECE00F4FA2B /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
+		A7E83B352A40EEE200F4FA2B /* Service */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Service; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
