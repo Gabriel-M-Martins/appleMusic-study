@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A75914242A4214560084CC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75914232A4214560084CC9A /* Assets.xcassets */; };
 		A7E83B122A40D08500F4FA2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E83B112A40D08500F4FA2B /* AppDelegate.swift */; };
 		A7E83B142A40D08500F4FA2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E83B132A40D08500F4FA2B /* SceneDelegate.swift */; };
 		A7E83B162A40D08500F4FA2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E83B152A40D08500F4FA2B /* ViewController.swift */; };
 		A7E83B192A40D08500F4FA2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E83B172A40D08500F4FA2B /* Main.storyboard */; };
 		A7E83B1E2A40D08600F4FA2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7E83B1C2A40D08600F4FA2B /* LaunchScreen.storyboard */; };
-		A7E83B332A40EECE00F4FA2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7E83B312A40EECD00F4FA2B /* Assets.xcassets */; };
 		A7E83B342A40EECE00F4FA2B /* Model in Resources */ = {isa = PBXBuildFile; fileRef = A7E83B322A40EECE00F4FA2B /* Model */; };
 		A7E83B362A40EEE200F4FA2B /* Service in Resources */ = {isa = PBXBuildFile; fileRef = A7E83B352A40EEE200F4FA2B /* Service */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A75914232A4214560084CC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7E83B0E2A40D08500F4FA2B /* UIKit-Nano.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit-Nano.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E83B112A40D08500F4FA2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7E83B132A40D08500F4FA2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,9 +26,8 @@
 		A7E83B182A40D08500F4FA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7E83B1D2A40D08600F4FA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7E83B1F2A40D08600F4FA2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7E83B312A40EECD00F4FA2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../../../Dropbox (Developer Academy)/Classes Content - 23-24/2023/Development/06-19 - UIKit Nano/Nano resources/Assets.xcassets"; sourceTree = "<group>"; };
-		A7E83B322A40EECE00F4FA2B /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
-		A7E83B352A40EEE200F4FA2B /* Service */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Service; sourceTree = "<group>"; };
+		A7E83B322A40EECE00F4FA2B /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Model; path = "/Users/gabrielmedeirosmartins/Documents/prog/swift/uikit-nano/UIKit-Nano/UIKit-Nano/Model"; sourceTree = "<absolute>"; };
+		A7E83B352A40EEE200F4FA2B /* Service */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Service; path = "/Users/gabrielmedeirosmartins/Documents/prog/swift/uikit-nano/UIKit-Nano/UIKit-Nano/Service"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				A7E83B172A40D08500F4FA2B /* Main.storyboard */,
 				A7E83B1C2A40D08600F4FA2B /* LaunchScreen.storyboard */,
 				A7E83B1F2A40D08600F4FA2B /* Info.plist */,
-				A7E83B312A40EECD00F4FA2B /* Assets.xcassets */,
+				A75914232A4214560084CC9A /* Assets.xcassets */,
 			);
 			path = "UIKit-Nano";
 			sourceTree = "<group>";
@@ -134,8 +134,8 @@
 				A7E83B362A40EEE200F4FA2B /* Service in Resources */,
 				A7E83B342A40EECE00F4FA2B /* Model in Resources */,
 				A7E83B1E2A40D08600F4FA2B /* LaunchScreen.storyboard in Resources */,
-				A7E83B332A40EECE00F4FA2B /* Assets.xcassets in Resources */,
 				A7E83B192A40D08500F4FA2B /* Main.storyboard in Resources */,
+				A75914242A4214560084CC9A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
