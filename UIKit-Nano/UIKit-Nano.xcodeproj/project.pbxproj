@@ -24,6 +24,7 @@
 		A7A626502A43620600FDB063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7A6264F2A43620600FDB063 /* Main.storyboard */; };
 		A7BA33402A43748900013E3B /* Songs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BA333F2A43748900013E3B /* Songs.storyboard */; };
 		A7BA33422A4374EA00013E3B /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA33412A4374EA00013E3B /* SongsViewController.swift */; };
+		A7BA33442A437EB500013E3B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA33432A437EB500013E3B /* Utils.swift */; };
 		A7E83B122A40D08500F4FA2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E83B112A40D08500F4FA2B /* AppDelegate.swift */; };
 		A7E83B142A40D08500F4FA2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E83B132A40D08500F4FA2B /* SceneDelegate.swift */; };
 		A7E83B162A40D08500F4FA2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E83B152A40D08500F4FA2B /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		A7A6264F2A43620600FDB063 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A7BA333F2A43748900013E3B /* Songs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Songs.storyboard; sourceTree = "<group>"; };
 		A7BA33412A4374EA00013E3B /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
+		A7BA33432A437EB500013E3B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A7E83B0E2A40D08500F4FA2B /* UIKit-Nano.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit-Nano.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E83B112A40D08500F4FA2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7E83B132A40D08500F4FA2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				A7E83B1C2A40D08600F4FA2B /* LaunchScreen.storyboard */,
 				A7E83B1F2A40D08600F4FA2B /* Info.plist */,
 				A75914232A4214560084CC9A /* Assets.xcassets */,
+				A7BA33432A437EB500013E3B /* Utils.swift */,
 			);
 			path = "UIKit-Nano";
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				A7E83B162A40D08500F4FA2B /* ViewController.swift in Sources */,
 				A7E83B122A40D08500F4FA2B /* AppDelegate.swift in Sources */,
 				A7E83B142A40D08500F4FA2B /* SceneDelegate.swift in Sources */,
+				A7BA33442A437EB500013E3B /* Utils.swift in Sources */,
 				A772C6F92A42233D002A2BE0 /* CollectionsViewController.swift in Sources */,
 				A7E83B2F2A40E34E00F4FA2B /* MusicTableViewCell.swift in Sources */,
 				A772C7032A4233C4002A2BE0 /* MusicCollectionHeaderTableViewCell.swift in Sources */,
