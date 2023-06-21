@@ -47,6 +47,8 @@ class OpenedCollectionViewController: UIViewController, UITableViewDataSource {
             cell.title.text = collection?.title
             cell.subtitle.text = collection?.mainPerson
             
+            cell.selectionStyle = .none
+            
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MusicCell", for: indexPath) as! MusicTableViewCell
@@ -62,6 +64,4 @@ class OpenedCollectionViewController: UIViewController, UITableViewDataSource {
         
         
     }
-    
-
 }

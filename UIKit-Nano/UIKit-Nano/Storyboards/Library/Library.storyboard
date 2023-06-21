@@ -65,11 +65,22 @@
                     <connections>
                         <outlet property="musicCollectionTypeTableView" destination="0fo-c1-S47" id="Lo1-Rv-XhV"/>
                         <segue destination="Kwt-Um-0TZ" kind="show" identifier="toCollections" id="tnk-ik-sZC"/>
+                        <segue destination="fLi-pf-4Ki" kind="show" identifier="toSongs" id="19c-kT-AVo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1959.5419847328244" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="1900" y="5"/>
+        </scene>
+        <!--Songs-->
+        <scene sceneID="Xha-TC-gNt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Songs" id="fLi-pf-4Ki" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Xl7-uj-UQS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SFr-eK-AA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2585" y="-50"/>
         </scene>
         <!--Collections-->
         <scene sceneID="Ac7-i4-KvG">
@@ -79,7 +90,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMg-4b-UxL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2650" y="5"/>
+            <point key="canvasLocation" x="2608" y="52"/>
         </scene>
         <!--Library-->
         <scene sceneID="EHA-6Z-fQF">
