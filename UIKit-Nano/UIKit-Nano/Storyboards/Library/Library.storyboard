@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FvO-Vh-MGi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FvO-Vh-MGi">
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -63,22 +64,22 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="musicCollectionTypeTableView" destination="0fo-c1-S47" id="Lo1-Rv-XhV"/>
-                        <segue destination="Kwt-Um-0TZ" kind="show" identifier="goToPlaylists" id="tnk-ik-sZC"/>
+                        <segue destination="Kwt-Um-0TZ" kind="show" identifier="toCollections" id="tnk-ik-sZC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1959.5419847328244" y="4.9295774647887329"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Collections-->
         <scene sceneID="Ac7-i4-KvG">
             <objects>
-                <viewControllerPlaceholder id="Kwt-Um-0TZ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Collections" storyboardName="Collections" id="Kwt-Um-0TZ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="7Ot-3Z-hR6"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMg-4b-UxL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2708" y="-61"/>
+            <point key="canvasLocation" x="2650" y="5"/>
         </scene>
         <!--Library-->
         <scene sceneID="EHA-6Z-fQF">

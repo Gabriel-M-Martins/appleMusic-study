@@ -24,6 +24,9 @@ class CollectionsViewController: UIViewController, UITableViewDataSource, UITabl
         collections = MusicService.shared.loadLibrary().filter({ collection in
             collection.type == collectionType
         })
+        
+        navigationItem.title = collectionType.description
+        navigationItem.backButtonDisplayMode = .minimal
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -18,6 +18,9 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
         
         musicCollectionTypeTableView.dataSource = self
         musicCollectionTypeTableView.delegate = self
+        
+        navigationItem.backButtonDisplayMode = .minimal
+        navigationController?.navigationBar.tintColor = .systemPink
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,6 +40,15 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: collectionTypes[indexPath.row].segueIdentifier, sender: collectionTypes[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCollections" {
+            guard let vc = segue.destination as? CollectionsViewController else { return }
+            guard let info = sender as? MusicCollectionType else { return }
+            
+            vc.collectionType = info
+        }
     }
     
     //TODO: Add func prepare for segue

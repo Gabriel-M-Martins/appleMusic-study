@@ -85,13 +85,13 @@ enum MusicCollectionType: String, Decodable, CaseIterable {
     var segueIdentifier: String {
         switch self {
             case .playlist:
-                return "goToPlaylists"
+                return "toCollections"
             case .album:
-                return "goToAlbum"
+                return "toCollections"
             case .songs:
-                return "goToSongs"
+                return "toSongs"
             case .artists:
-                return "goToArtists"
+                return "toCollections"
         }
     }
 }
