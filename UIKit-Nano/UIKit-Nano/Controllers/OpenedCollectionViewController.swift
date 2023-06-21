@@ -16,10 +16,9 @@ class OpenedCollectionViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "MusicTableViewCell", bundle: nil), forCellReuseIdentifier: "MusicCell")
+//        tableView.register(UINib(nibName: "MusicTableViewCell", bundle: nil), forCellReuseIdentifier: "MusicCell")
         tableView.dataSource = self
         
-//        collection = MusicService.shared.getCollection(id: "2KJjOBX280F3hZZE1xO33O")
         musics = collection != nil ? collection!.musics : []
     }
     
@@ -51,13 +50,13 @@ class OpenedCollectionViewController: UIViewController, UITableViewDataSource {
             
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MusicCell", for: indexPath) as! MusicTableViewCell
+            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "MusicCell", for: indexPath)
             
             let music = musics[indexPath.row]
             
-            cell.musicImage.image = MusicService.shared.getCoverImage(forItemIded: music.id)
-            cell.title.text = music.title
-            cell.subtitle.text = music.artist
+            cell.textLabel?.text = music.title
+            cell.detailTextLabel?.text = music.artist
+            cell.imageView?.image = imageWithImage(image: MusicService.shared.getCoverImage(forItemIded: music.id)!, scaledToSize: .init(width: 40, height: 40))
             
             return cell
         }
