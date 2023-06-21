@@ -64,11 +64,20 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="RI1-aH-fE6" id="gCt-tH-xcI"/>
+                        <segue destination="j8S-lG-4yT" kind="presentation" identifier="toPlayer" id="I0h-u3-wKe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="5"/>
+            <point key="canvasLocation" x="175" y="22"/>
+        </scene>
+        <!--Player-->
+        <scene sceneID="ZNp-zU-cbx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Player" id="j8S-lG-4yT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsx-qh-c5x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="699" y="22"/>
         </scene>
     </scenes>
     <resources>

@@ -16,9 +16,7 @@ class OpenedCollectionViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tableView.register(UINib(nibName: "MusicTableViewCell", bundle: nil), forCellReuseIdentifier: "MusicCell")
         tableView.dataSource = self
-        
         musics = collection != nil ? collection!.musics : []
     }
     
