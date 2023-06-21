@@ -14,7 +14,7 @@ class FavoritesViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var buttonTeste: UIButton!
     let searchController = UISearchController()
     
-    @ObservableObject var favoriteMusics = MusicService.shared.favoriteMusics
+    var favoriteMusics = MusicService.shared.favoriteMusics
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,8 @@ class FavoritesViewController: UIViewController, UITableViewDataSource {
 //        print(MusicService.shared.getAllMusics().first)
         guard let music = MusicService.shared.getAllMusics().first else { return }
         MusicService.shared.toggleFavorite(music: music, isFavorite: true)
-        
+        favoriteMusics = MusicService.shared.favoriteMusics
+        favoritesTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
