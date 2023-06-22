@@ -48,6 +48,7 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
             guard let info = sender as? MusicCollectionType else { return }
             
             vc.collectionType = info
+            return
         }
     }
     
