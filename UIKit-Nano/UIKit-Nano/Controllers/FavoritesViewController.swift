@@ -11,7 +11,6 @@ class FavoritesViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var favoritesTableView: UITableView!
     
-    @IBOutlet weak var buttonTeste: UIButton!
     let searchController = UISearchController()
     
     var favoriteMusics = MusicService.shared.favoriteMusics
@@ -25,10 +24,19 @@ class FavoritesViewController: UIViewController, UITableViewDataSource {
         favoritesTableView.dataSource = self
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard !favoriteMusics.isEmpty else { return 1 }
+        //guard !favoriteMusics.isEmpty else { return 1 }
         
-        return favoriteMusics.count
+        //return favoriteMusics.count
+        if section == 0 {
+            return favoriteMusics.count
+        } else {
+            return 1
+        }
     }
     
     @IBAction func favorite(_ sender: Any) {
@@ -40,16 +48,13 @@ class FavoritesViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: UITableViewCell
         
-        if favoriteMusics.isEmpty {
-            cell = favoritesTableView.dequeueReusableCell(withIdentifier: "EmptyFavoritesCell", for: indexPath)
-        } else {
+        if indexPath.section == 0 {
             let music = favoriteMusics[indexPath.row]
             let favoriteButton = UIImageView(image: UIImage(systemName: "heart.fill"))
             favoriteButton.tintColor = .systemPink
             
-            cell = favoritesTableView.dequeueReusableCell(withIdentifier: "FavoriteMusicCell", for: indexPath)
+            let cell = favoritesTableView.dequeueReusableCell(withIdentifier: "FavoriteMusicCell", for: indexPath)
             
             cell.imageView?.image = MusicService.shared.getCoverImage(forItemIded: music.id)
             cell.imageView?.layer.cornerRadius = 4
@@ -60,8 +65,11 @@ class FavoritesViewController: UIViewController, UITableViewDataSource {
             
             cell.accessoryView = favoriteButton
             
+            return cell
+        } else {
+            let cell = favoritesTableView.dequeueReusableCell(withIdentifier: "EmptyFavoritesCell", for: indexPath)
+            
+            return cell
         }
-        
-        return cell
     }
 }
