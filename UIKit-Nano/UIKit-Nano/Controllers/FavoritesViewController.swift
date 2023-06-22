@@ -52,7 +52,7 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
             
             cell = favoritesTableView.dequeueReusableCell(withIdentifier: "FavoriteMusicCell", for: indexPath)
             
-            cell.imageView?.image = MusicService.shared.getCoverImage(forItemIded: music.id)
+            cell.imageView?.image = imageWithImage(image: MusicService.shared.getCoverImage(forItemIded: music.id)!, scaledToSize: .init(width: 40, height: 40))
             cell.imageView?.layer.cornerRadius = 4
             
             cell.textLabel?.text = music.title
