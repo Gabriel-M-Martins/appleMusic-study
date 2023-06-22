@@ -23,26 +23,21 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         
         favoritesTableView.dataSource = self
         favoritesTableView.delegate = self
+        
+        //MARK: temporary testing favorite toggle
+//        guard let music = MusicService.shared.getAllMusics().first else { return }
+//                MusicService.shared.toggleFavorite(music: music, isFavorite: true)
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        MusicService.shared.toggleFavorite(music: favoriteMusics[indexPath.row], isFavorite: true)
-        favoriteMusics = MusicService.shared.favoriteMusics
-        favoritesTableView.reloadData()
+        //TODO: play music
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard !favoriteMusics.isEmpty else { return 1 }
         
         return favoriteMusics.count
-    }
-    
-    @IBAction func favorite(_ sender: Any) {
-        //        print(MusicService.shared.getAllMusics().first)
-        guard let music = MusicService.shared.getAllMusics().first else { return }
-        MusicService.shared.toggleFavorite(music: music, isFavorite: true)
-        favoriteMusics = MusicService.shared.favoriteMusics
-        favoritesTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,9 +60,22 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
             cell.detailTextLabel?.text = music.artist
             
             cell.accessoryView = favoriteButton
+            cell.accessoryView?.isUserInteractionEnabled = true
+            cell.accessoryView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleFavorite(_:))))
+            cell.accessoryView?.layer.setValue(music, forKey: "music")
             
         }
         
         return cell
+    }
+    
+    @objc func toggleFavorite(_ sender: UIGestureRecognizer) {
+        guard let music = sender.view?.layer.value(forKey: "music") as? Music else { return }
+        MusicService.shared.toggleFavorite(music: music, isFavorite: false)
+        
+        favoriteMusics = MusicService.shared.favoriteMusics
+        DispatchQueue.main.async {
+            self.favoritesTableView.reloadData()
+        }
     }
 }
