@@ -17,6 +17,7 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.tableHeaderView = UIView()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,13 +44,16 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toPlayer" {
-            guard let vc = segue.destination as? PlayerViewController else { return }
+            guard let navigationvc = segue.destination as? UINavigationController else { return }
+            
+            guard let vc = navigationvc.topViewController as? PlayerViewController else { return }
             
             guard let info = sender as? Music else { return }
             
-            vc.musicImage = MusicService.shared.getCoverImage(forItemIded: info.id)
-            vc.musicTitleHolder = info.title
-            vc.musicArtistHolder = info.artist
+//            vc.musicImage = MusicService.shared.getCoverImage(forItemIded: info.id)
+//            vc.musicTitleHolder = info.title
+//            vc.musicArtistHolder = info.artist
+            vc.music = info
         }
     }
     

@@ -64,7 +64,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="RI1-aH-fE6" id="gCt-tH-xcI"/>
-                        <segue destination="j8S-lG-4yT" kind="presentation" identifier="toPlayer" id="I0h-u3-wKe"/>
+                        <segue destination="j8S-lG-4yT" kind="presentation" identifier="toPlayer" modalPresentationStyle="pageSheet" id="I0h-u3-wKe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
