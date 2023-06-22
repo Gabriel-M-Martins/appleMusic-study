@@ -11,13 +11,14 @@ class LibraryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var musicCollectionTypeTableView: UITableView!
     
-    var collectionTypes: [MusicCollectionType] = MusicCollectionType.allCases
+    var collectionTypes: [MusicCollectionType] = [.playlist, .artists, .songs]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         musicCollectionTypeTableView.dataSource = self
         musicCollectionTypeTableView.delegate = self
+        musicCollectionTypeTableView.tableHeaderView = UIView()
         
         navigationItem.backButtonDisplayMode = .minimal
         navigationController?.navigationBar.tintColor = .systemPink
