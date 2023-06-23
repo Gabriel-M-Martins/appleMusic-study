@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X3B-6m-JT8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X3B-6m-JT8">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,6 +23,7 @@
                     <connections>
                         <segue destination="1N3-Ql-BUC" kind="relationship" relationship="viewControllers" id="Q1k-da-s8O"/>
                         <segue destination="M19-1Z-7WB" kind="relationship" relationship="viewControllers" id="B5A-mj-rH4"/>
+                        <segue destination="G2v-ya-UtI" kind="relationship" relationship="viewControllers" id="SiK-yJ-tcF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qvJ-bA-ytC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -48,6 +49,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E17-dy-jZu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="413" y="-425"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="SeU-SB-v81">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="G2v-ya-UtI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="zeh-38-cuO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eRw-wG-v2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434" y="-351"/>
         </scene>
     </scenes>
     <resources>
