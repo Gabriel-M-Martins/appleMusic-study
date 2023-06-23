@@ -31,7 +31,7 @@ class PlayerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "nada"
+        self.title = "Playing"
 
         guard let music = self.music else { return }
         
