@@ -17,7 +17,7 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.tableHeaderView = UIView()
+        tableView.tableHeaderView = nil
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

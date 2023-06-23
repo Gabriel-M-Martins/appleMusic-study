@@ -188,7 +188,7 @@
                             <constraint firstItem="P7U-Es-xXH" firstAttribute="top" secondItem="Q94-7m-l9n" secondAttribute="bottom" id="zOa-Cg-n1g"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7BD-g2-Q8u"/>
+                    <navigationItem key="navigationItem" title="Playing" largeTitleDisplayMode="always" id="7BD-g2-Q8u"/>
                     <connections>
                         <outlet property="backwardButton" destination="Po1-SS-lQv" id="16c-lF-hCn"/>
                         <outlet property="favoriteIcon" destination="Wn9-PU-vWO" id="YB2-HN-CXc"/>
@@ -208,6 +208,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qnC-Kf-fRA">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNz-bE-fhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qhd-ZY-AgX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GYY-Fl-kjb">
@@ -219,7 +220,6 @@
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="W3n-Hm-Ncw"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNz-bE-fhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="976.33587786259534" y="3.5211267605633805"/>
         </scene>
