@@ -54,6 +54,10 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toPlayer", sender: favoriteMusics[indexPath.row])
     }
