@@ -20,6 +20,10 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.tableHeaderView = nil
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         songs.count
     }
