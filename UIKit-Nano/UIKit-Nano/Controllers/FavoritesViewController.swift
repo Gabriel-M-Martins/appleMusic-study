@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FavoritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIAdaptivePresentationControllerDelegate {
     
     @IBOutlet weak var favoritesTableView: UITableView!
     
@@ -24,14 +24,38 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         favoritesTableView.dataSource = self
         favoritesTableView.delegate = self
         
-        //MARK: temporary testing favorite toggle
+//MARK: temporary testing favorite toggle
 //        guard let music = MusicService.shared.getAllMusics().first else { return }
 //                MusicService.shared.toggleFavorite(music: music, isFavorite: true)
         
     }
     
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        self.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPlayer" {
+            guard let navigationvc = segue.destination as? UINavigationController else { return }
+            guard let vc = navigationvc.topViewController as? PlayerViewController else { return }
+            
+            guard let info = sender as? Music else { return }
+            
+            vc.music = info
+            navigationvc.presentationController?.delegate = self
+            
+        }
+    }
+    
+    func reloadData() {
+        self.favoriteMusics = MusicService.shared.favoriteMusics
+        DispatchQueue.main.async {
+            self.favoritesTableView.reloadData()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO: play music
+        performSegue(withIdentifier: "toPlayer", sender: favoriteMusics[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,9 +97,6 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         guard let music = sender.view?.layer.value(forKey: "music") as? Music else { return }
         MusicService.shared.toggleFavorite(music: music, isFavorite: false)
         
-        favoriteMusics = MusicService.shared.favoriteMusics
-        DispatchQueue.main.async {
-            self.favoritesTableView.reloadData()
-        }
+        self.reloadData()
     }
 }
