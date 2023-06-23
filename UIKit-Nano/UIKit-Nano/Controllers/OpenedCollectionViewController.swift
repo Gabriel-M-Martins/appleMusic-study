@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OpenedCollectionViewController: UIViewController, UITableViewDataSource {
+class OpenedCollectionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     var collection: MusicCollection? = nil
@@ -16,8 +16,8 @@ class OpenedCollectionViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tableView.register(UINib(nibName: "MusicTableViewCell", bundle: nil), forCellReuseIdentifier: "MusicCell")
         tableView.dataSource = self
+        tableView.delegate = self
         
         musics = collection != nil ? collection!.musics : []
     }
@@ -60,7 +60,22 @@ class OpenedCollectionViewController: UIViewController, UITableViewDataSource {
             
             return cell
         }
-        
-        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            performSegue(withIdentifier: "toPlayer", sender: musics[indexPath.row])
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPlayer" {
+            guard let navigationvc = segue.destination as? UINavigationController else { return }
+            guard let vc = navigationvc.topViewController as? PlayerViewController else { return }
+            
+            guard let info = sender as? Music else { return }
+            
+            vc.music = info
+        }
     }
 }

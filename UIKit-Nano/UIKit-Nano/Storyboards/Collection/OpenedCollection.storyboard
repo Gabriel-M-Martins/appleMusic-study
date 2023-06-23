@@ -120,11 +120,20 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="dRn-1Y-jQL" id="Zbd-5I-mOJ"/>
+                        <segue destination="6yk-LY-bjr" kind="presentation" identifier="toPlayer" id="J0I-M5-e7J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="120" y="27"/>
+        </scene>
+        <!--Player-->
+        <scene sceneID="4nD-cF-g9b">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Player" id="6yk-LY-bjr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hD3-gn-FcX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="27"/>
         </scene>
     </scenes>
     <resources>

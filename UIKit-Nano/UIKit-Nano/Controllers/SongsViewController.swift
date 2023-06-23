@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SongsViewController: UIViewController, UITableViewDataSource {
+class SongsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     let songs: [Music] = MusicService.shared.getAllMusics()
@@ -16,6 +16,8 @@ class SongsViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
+        tableView.tableHeaderView = nil
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,6 +36,25 @@ class SongsViewController: UIViewController, UITableViewDataSource {
         cell.imageView?.layer.cornerRadius = 4
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toPlayer", sender: songs[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPlayer" {
+            guard let navigationvc = segue.destination as? UINavigationController else { return }
+            
+            guard let vc = navigationvc.topViewController as? PlayerViewController else { return }
+            
+            guard let info = sender as? Music else { return }
+            
+//            vc.musicImage = MusicService.shared.getCoverImage(forItemIded: info.id)
+//            vc.musicTitleHolder = info.title
+//            vc.musicArtistHolder = info.artist
+            vc.music = info
+        }
     }
     
 }
